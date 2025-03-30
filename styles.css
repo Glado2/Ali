@@ -1,0 +1,280 @@
+/* CSS Reset وتنسيقات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #4285F4;
+    --secondary-color: #34A853;
+    --warning-color: #EA4335;
+    --text-color: #333;
+    --light-bg: #f5f5f5;
+    --dark-bg: #2c3e50;
+    --font-family: 'Tajawal', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--light-bg);
+    text-align: right;
+}
+
+/* تخطي إلى المحتوى الرئيسي */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: var(--dark-bg);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* التنسيق العام للعناصر */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* تنسيق الهيدر */
+header {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* التنقل */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* المحتوى الرئيسي */
+main {
+    padding: 2rem 0;
+}
+
+.content {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.content h3 {
+    color: var(--secondary-color);
+    margin: 1rem 0;
+    font-size: 1.4rem;
+}
+
+.content h4 {
+    color: var(--dark-bg);
+    margin: 1rem 0;
+}
+
+/* مربع التحذير */
+.warning-box {
+    background-color: #FFF3E0;
+    border-right: 5px solid var(--warning-color);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.warning-box p {
+    color: var(--warning-color);
+    font-weight: bold;
+}
+
+/* القوائم */
+.risk-list, .protection-steps, .features ul {
+    margin: 1rem 0;
+    padding-right: 1.5rem;
+}
+
+.risk-list li, .protection-steps li, .features li {
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+.protection-steps {
+    list-style-type: arabic-indic;
+}
+
+/* قسم التحميل الآمن */
+.premium-section {
+    background-color: #E8F0FE;
+    border: 1px solid var(--primary-color);
+}
+
+.channel-box {
+    text-align: center;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.telegram-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    margin: 1rem 0;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.telegram-btn:hover {
+    background-color: #3367D6;
+}
+
+.features {
+    text-align: right;
+    margin-top: 1.5rem;
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* الأسئلة الشائعة */
+.faq-item {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.faq-item h3 {
+    cursor: pointer;
+    position: relative;
+    padding-right: 1.5rem;
+}
+
+.faq-item h3::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.faq-item p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding-right: 1.5rem;
+}
+
+.faq-item p.active {
+    max-height: 300px;
+}
+
+/* الفوتر */
+footer {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* التنسيق للهواتف */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main-nav li {
+        margin: 5px 0;
+    }
+    
+    .content {
+        padding: 1rem;
+    }
+    
+    .content h2 {
+        font-size: 1.5rem;
+    }
+}
